@@ -1,0 +1,7 @@
+D:\Aston\intensive\notification-service\src\main\java\io\github\Bochakms\controller\NotificationController.java
+D:\Aston\intensive\notification-service\src\main\java\io\github\Bochakms\NotificationServiceApplication.java
+D:\Aston\intensive\notification-service\src\main\java\io\github\Bochakms\model\UserEvent.java
+D:\Aston\intensive\notification-service\src\main\java\io\github\Bochakms\config\AppConfig.java
+D:\Aston\intensive\notification-service\src\main\java\io\github\Bochakms\dto\UserEventMessage.java
+D:\Aston\intensive\notification-service\src\main\java\io\github\Bochakms\consumer\KafkaNotificationConsumer.java
+D:\Aston\intensive\notification-service\src\main\java\io\github\Bochakms\service\EmailService.java

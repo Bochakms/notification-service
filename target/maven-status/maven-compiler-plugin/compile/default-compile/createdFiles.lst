@@ -1,0 +1,7 @@
+io\github\Bochakms\controller\NotificationController.class
+io\github\Bochakms\dto\UserEventMessage.class
+io\github\Bochakms\consumer\KafkaNotificationConsumer.class
+io\github\Bochakms\NotificationServiceApplication.class
+io\github\Bochakms\config\AppConfig.class
+io\github\Bochakms\service\EmailService.class
+io\github\Bochakms\model\UserEvent.class
