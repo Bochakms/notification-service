@@ -1,0 +1,80 @@
+-------------------------------------------------------------------------------
+Test set: io.github.Bochakms.NotificationServiceIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.327 s <<< FAILURE! -- in io.github.Bochakms.NotificationServiceIntegrationTest
+io.github.Bochakms.NotificationServiceIntegrationTest.shouldSendAccountDeletedEmail -- Time elapsed: 0.568 s <<< ERROR!
+io.github.Bochakms.exception.NotificationException: Failed to send email
+	at io.github.Bochakms.service.EmailService.sendEmail(EmailService.java:54)
+	at io.github.Bochakms.service.EmailService.sendAccountDeletedEmail(EmailService.java:33)
+	at io.github.Bochakms.NotificationServiceIntegrationTest.shouldSendAccountDeletedEmail(NotificationServiceIntegrationTest.java:77)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.springframework.mail.MailSendException: Failed to close server connection after message failures. Failed messages: org.eclipse.angus.mail.smtp.SMTPSendFailedException: [EOF]; message exceptions (1) are:
+Failed message 1: org.eclipse.angus.mail.smtp.SMTPSendFailedException: [EOF]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:443)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:317)
+	at org.springframework.mail.MailSender.send(MailSender.java:42)
+	at io.github.Bochakms.service.EmailService.sendEmail(EmailService.java:50)
+	... 5 more
+Caused by: jakarta.mail.MessagingException: Can't send command to SMTP host;
+  nested exception is:
+	java.net.SocketException: Программа на вашем хост-компьютере разорвала установленное подключение
+	at org.eclipse.angus.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2464)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2451)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.close(SMTPTransport.java:1399)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:438)
+	... 8 more
+Caused by: java.net.SocketException: Программа на вашем хост-компьютере разорвала установленное подключение
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:54)
+	at java.base/sun.nio.ch.NioSocketImpl.tryWrite(NioSocketImpl.java:394)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:410)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at org.eclipse.angus.mail.util.TraceOutputStream.write(TraceOutputStream.java:120)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:125)
+	at java.base/java.io.BufferedOutputStream.implFlush(BufferedOutputStream.java:252)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:240)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2462)
+	... 11 more
+
+io.github.Bochakms.NotificationServiceIntegrationTest.shouldSendAccountCreatedEmail -- Time elapsed: 0.069 s <<< ERROR!
+io.github.Bochakms.exception.NotificationException: Failed to send email
+	at io.github.Bochakms.service.EmailService.sendEmail(EmailService.java:54)
+	at io.github.Bochakms.service.EmailService.sendAccountCreatedEmail(EmailService.java:27)
+	at io.github.Bochakms.NotificationServiceIntegrationTest.shouldSendAccountCreatedEmail(NotificationServiceIntegrationTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.springframework.mail.MailSendException: Failed to close server connection after message failures. Failed messages: org.eclipse.angus.mail.smtp.SMTPSendFailedException: [EOF]; message exceptions (1) are:
+Failed message 1: org.eclipse.angus.mail.smtp.SMTPSendFailedException: [EOF]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:443)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:317)
+	at org.springframework.mail.MailSender.send(MailSender.java:42)
+	at io.github.Bochakms.service.EmailService.sendEmail(EmailService.java:50)
+	... 5 more
+Caused by: jakarta.mail.MessagingException: Can't send command to SMTP host;
+  nested exception is:
+	java.net.SocketException: Программа на вашем хост-компьютере разорвала установленное подключение
+	at org.eclipse.angus.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2464)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2451)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.close(SMTPTransport.java:1399)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:438)
+	... 8 more
+Caused by: java.net.SocketException: Программа на вашем хост-компьютере разорвала установленное подключение
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:54)
+	at java.base/sun.nio.ch.NioSocketImpl.tryWrite(NioSocketImpl.java:394)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:410)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:440)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:819)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1195)
+	at org.eclipse.angus.mail.util.TraceOutputStream.write(TraceOutputStream.java:120)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:125)
+	at java.base/java.io.BufferedOutputStream.implFlush(BufferedOutputStream.java:252)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:240)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.sendCommand(SMTPTransport.java:2462)
+	... 11 more
+

@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="io.github.Bochakms.NotificationServiceApplicationTests" time="41.453" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.class.path" value="D:\Aston\intensive\notification-service\target\test-classes;D:\Aston\intensive\notification-service\target\classes;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.5.3\spring-boot-starter-web-3.5.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter\3.5.3\spring-boot-starter-3.5.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot\3.5.3\spring-boot-3.5.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.5.3\spring-boot-autoconfigure-3.5.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.5.3\spring-boot-starter-logging-3.5.3.jar;C:\Users\User\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.24.3\log4j-to-slf4j-2.24.3.jar;C:\Users\User\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\User\.m2\repository\org\slf4j\jul-to-slf4j\2.0.17\jul-to-slf4j-2.0.17.jar;C:\Users\User\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\User\.m2\repository\org\yaml\snakeyaml\2.4\snakeyaml-2.4.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.5.3\spring-boot-starter-json-3.5.3.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.19.1\jackson-databind-2.19.1.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.19.1\jackson-annotations-2.19.1.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.19.1\jackson-core-2.19.1.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.19.1\jackson-datatype-jdk8-2.19.1.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.19.1\jackson-datatype-jsr310-2.19.1.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.19.1\jackson-module-parameter-names-2.19.1.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.5.3\spring-boot-starter-tomcat-3.5.3.jar;C:\Users\User\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.42\tomcat-embed-core-10.1.42.jar;C:\Users\User\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.42\tomcat-embed-el-10.1.42.jar;C:\Users\User\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.42\tomcat-embed-websocket-10.1.42.jar;C:\Users\User\.m2\repository\org\springframework\spring-web\6.2.8\spring-web-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\spring-beans\6.2.8\spring-beans-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\spring-webmvc\6.2.8\spring-webmvc-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\spring-aop\6.2.8\spring-aop-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\spring-expression\6.2.8\spring-expression-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\kafka\spring-kafka\3.3.7\spring-kafka-3.3.7.jar;C:\Users\User\.m2\repository\org\springframework\spring-context\6.2.8\spring-context-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\spring-messaging\6.2.8\spring-messaging-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\spring-tx\6.2.8\spring-tx-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\retry\spring-retry\2.0.12\spring-retry-2.0.12.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-clients\3.9.1\kafka-clients-3.9.1.jar;C:\Users\User\.m2\repository\com\github\luben\zstd-jni\1.5.6-4\zstd-jni-1.5.6-4.jar;C:\Users\User\.m2\repository\org\lz4\lz4-java\1.8.0\lz4-java-1.8.0.jar;C:\Users\User\.m2\repository\org\xerial\snappy\snappy-java\1.1.10.5\snappy-java-1.1.10.5.jar;C:\Users\User\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\User\.m2\repository\io\micrometer\micrometer-observation\1.15.1\micrometer-observation-1.15.1.jar;C:\Users\User\.m2\repository\io\micrometer\micrometer-commons\1.15.1\micrometer-commons-1.15.1.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-mail\3.5.3\spring-boot-starter-mail-3.5.3.jar;C:\Users\User\.m2\repository\org\springframework\spring-context-support\6.2.8\spring-context-support-6.2.8.jar;C:\Users\User\.m2\repository\org\eclipse\angus\jakarta.mail\2.0.3\jakarta.mail-2.0.3.jar;C:\Users\User\.m2\repository\jakarta\mail\jakarta.mail-api\2.1.2\jakarta.mail-api-2.1.2.jar;C:\Users\User\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\User\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.5.3\spring-boot-starter-test-3.5.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-test\3.5.3\spring-boot-test-3.5.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.5.3\spring-boot-test-autoconfigure-3.5.3.jar;C:\Users\User\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\User\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\User\.m2\repository\net\minidev\json-smart\2.5.2\json-smart-2.5.2.jar;C:\Users\User\.m2\repository\net\minidev\accessors-smart\2.5.2\accessors-smart-2.5.2.jar;C:\Users\User\.m2\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;C:\Users\User\.m2\repository\org\assertj\assertj-core\3.27.3\assertj-core-3.27.3.jar;C:\Users\User\.m2\repository\net\bytebuddy\byte-buddy\1.17.6\byte-buddy-1.17.6.jar;C:\Users\User\.m2\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;C:\Users\User\.m2\repository\org\hamcrest\hamcrest\3.0\hamcrest-3.0.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter\5.12.2\junit-jupiter-5.12.2.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.12.2\junit-jupiter-params-5.12.2.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.12.2\junit-jupiter-engine-5.12.2.jar;C:\Users\User\.m2\repository\org\mockito\mockito-core\5.17.0\mockito-core-5.17.0.jar;C:\Users\User\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.6\byte-buddy-agent-1.17.6.jar;C:\Users\User\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\User\.m2\repository\org\mockito\mockito-junit-jupiter\5.17.0\mockito-junit-jupiter-5.17.0.jar;C:\Users\User\.m2\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;C:\Users\User\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\User\.m2\repository\org\springframework\spring-core\6.2.8\spring-core-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\spring-jcl\6.2.8\spring-jcl-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\spring-test\6.2.8\spring-test-6.2.8.jar;C:\Users\User\.m2\repository\org\xmlunit\xmlunit-core\2.10.2\xmlunit-core-2.10.2.jar;C:\Users\User\.m2\repository\org\springframework\kafka\spring-kafka-test\3.3.7\spring-kafka-test-3.3.7.jar;C:\Users\User\.m2\repository\org\apache\zookeeper\zookeeper\3.8.4\zookeeper-3.8.4.jar;C:\Users\User\.m2\repository\org\apache\zookeeper\zookeeper-jute\3.8.4\zookeeper-jute-3.8.4.jar;C:\Users\User\.m2\repository\org\apache\yetus\audience-annotations\0.12.0\audience-annotations-0.12.0.jar;C:\Users\User\.m2\repository\io\netty\netty-handler\4.1.122.Final\netty-handler-4.1.122.Final.jar;C:\Users\User\.m2\repository\io\netty\netty-common\4.1.122.Final\netty-common-4.1.122.Final.jar;C:\Users\User\.m2\repository\io\netty\netty-resolver\4.1.122.Final\netty-resolver-4.1.122.Final.jar;C:\Users\User\.m2\repository\io\netty\netty-buffer\4.1.122.Final\netty-buffer-4.1.122.Final.jar;C:\Users\User\.m2\repository\io\netty\netty-transport\4.1.122.Final\netty-transport-4.1.122.Final.jar;C:\Users\User\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.122.Final\netty-transport-native-unix-common-4.1.122.Final.jar;C:\Users\User\.m2\repository\io\netty\netty-codec\4.1.122.Final\netty-codec-4.1.122.Final.jar;C:\Users\User\.m2\repository\io\netty\netty-transport-native-epoll\4.1.122.Final\netty-transport-native-epoll-4.1.122.Final.jar;C:\Users\User\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.122.Final\netty-transport-classes-epoll-4.1.122.Final.jar;C:\Users\User\.m2\repository\ch\qos\logback\logback-core\1.5.18\logback-core-1.5.18.jar;C:\Users\User\.m2\repository\ch\qos\logback\logback-classic\1.5.18\logback-classic-1.5.18.jar;C:\Users\User\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-clients\3.9.1\kafka-clients-3.9.1-test.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-server\3.9.1\kafka-server-3.9.1.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-storage\3.9.1\kafka-storage-3.9.1.jar;C:\Users\User\.m2\repository\com\github\ben-manes\caffeine\caffeine\3.2.1\caffeine-3.2.1.jar;C:\Users\User\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\User\.m2\repository\com\google\errorprone\error_prone_annotations\2.38.0\error_prone_annotations-2.38.0.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-group-coordinator\3.9.1\kafka-group-coordinator-3.9.1.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-transaction-coordinator\3.9.1\kafka-transaction-coordinator-3.9.1.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-raft\3.9.1\kafka-raft-3.9.1.jar;C:\Users\User\.m2\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-metadata\3.9.1\kafka-metadata-3.9.1.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-server-common\3.9.1\kafka-server-common-3.9.1.jar;C:\Users\User\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\User\.m2\repository\org\pcollections\pcollections\4.0.1\pcollections-4.0.1.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-server-common\3.9.1\kafka-server-common-3.9.1-test.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-streams-test-utils\3.9.1\kafka-streams-test-utils-3.9.1.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-streams\3.9.1\kafka-streams-3.9.1.jar;C:\Users\User\.m2\repository\org\rocksdb\rocksdbjni\7.9.2\rocksdbjni-7.9.2.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka_2.13\3.9.1\kafka_2.13-3.9.1.jar;C:\Users\User\.m2\repository\org\scala-lang\scala-library\2.13.15\scala-library-2.13.15.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-group-coordinator-api\3.9.1\kafka-group-coordinator-api-3.9.1.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-storage-api\3.9.1\kafka-storage-api-3.9.1.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-tools-api\3.9.1\kafka-tools-api-3.9.1.jar;C:\Users\User\.m2\repository\net\sourceforge\argparse4j\argparse4j\0.7.0\argparse4j-0.7.0.jar;C:\Users\User\.m2\repository\commons-validator\commons-validator\1.7\commons-validator-1.7.jar;C:\Users\User\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\User\.m2\repository\commons-digester\commons-digester\2.1\commons-digester-2.1.jar;C:\Users\User\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\module\jackson-module-scala_2.13\2.19.1\jackson-module-scala_2.13-2.19.1.jar;C:\Users\User\.m2\repository\com\thoughtworks\paranamer\paranamer\2.8.3\paranamer-2.8.3.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-csv\2.19.1\jackson-dataformat-csv-2.19.1.jar;C:\Users\User\.m2\repository\org\bitbucket\b_c\jose4j\0.9.4\jose4j-0.9.4.jar;C:\Users\User\.m2\repository\org\scala-lang\modules\scala-collection-compat_2.13\2.10.0\scala-collection-compat_2.13-2.10.0.jar;C:\Users\User\.m2\repository\org\scala-lang\modules\scala-java8-compat_2.13\1.0.2\scala-java8-compat_2.13-1.0.2.jar;C:\Users\User\.m2\repository\org\scala-lang\scala-reflect\2.13.15\scala-reflect-2.13.15.jar;C:\Users\User\.m2\repository\com\typesafe\scala-logging\scala-logging_2.13\3.9.5\scala-logging_2.13-3.9.5.jar;C:\Users\User\.m2\repository\io\dropwizard\metrics\metrics-core\4.1.12.1\metrics-core-4.1.12.1.jar;C:\Users\User\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka_2.13\3.9.1\kafka_2.13-3.9.1-test.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.12.2\junit-jupiter-api-5.12.2.jar;C:\Users\User\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-commons\1.12.2\junit-platform-commons-1.12.2.jar;C:\Users\User\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-launcher\1.12.2\junit-platform-launcher-1.12.2.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-engine\1.12.2\junit-platform-engine-1.12.2.jar;C:\Users\User\.m2\repository\org\testcontainers\junit-jupiter\1.19.4\junit-jupiter-1.19.4.jar;C:\Users\User\.m2\repository\org\testcontainers\testcontainers\1.19.4\testcontainers-1.19.4.jar;C:\Users\User\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\User\.m2\repository\org\hamcrest\hamcrest-core\3.0\hamcrest-core-3.0.jar;C:\Users\User\.m2\repository\org\apache\commons\commons-compress\1.25.0\commons-compress-1.25.0.jar;C:\Users\User\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\User\.m2\repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;C:\Users\User\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\User\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.3.4\docker-java-transport-zerodep-3.3.4.jar;C:\Users\User\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\User\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\User\.m2\repository\org\testcontainers\kafka\1.19.4\kafka-1.19.4.jar;C:\Users\User\.m2\repository\com\icegreen\greenmail-junit5\2.0.1\greenmail-junit5-2.0.1.jar;C:\Users\User\.m2\repository\com\icegreen\greenmail\2.0.1\greenmail-2.0.1.jar;C:\Users\User\.m2\repository\org\eclipse\angus\angus-mail\2.0.2\angus-mail-2.0.2.jar;C:\Users\User\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="catalina.useNaming" value="false"/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Europe/Kaliningrad"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.boot.library.path" value="C:\Users\User\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\User\AppData\Local\Temp\surefire17182677750751199568\surefirebooter-20250714003359536_3.jar C:\Users\User\AppData\Local\Temp\surefire17182677750751199568 2025-07-14T00-33-59_222-jvmRun1 surefire-20250714003359536_1tmp surefire_0-20250714003359536_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\Aston\intensive\notification-service\target\test-classes;D:\Aston\intensive\notification-service\target\classes;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.5.3\spring-boot-starter-web-3.5.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter\3.5.3\spring-boot-starter-3.5.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot\3.5.3\spring-boot-3.5.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.5.3\spring-boot-autoconfigure-3.5.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.5.3\spring-boot-starter-logging-3.5.3.jar;C:\Users\User\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.24.3\log4j-to-slf4j-2.24.3.jar;C:\Users\User\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\User\.m2\repository\org\slf4j\jul-to-slf4j\2.0.17\jul-to-slf4j-2.0.17.jar;C:\Users\User\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\User\.m2\repository\org\yaml\snakeyaml\2.4\snakeyaml-2.4.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.5.3\spring-boot-starter-json-3.5.3.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.19.1\jackson-databind-2.19.1.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.19.1\jackson-annotations-2.19.1.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.19.1\jackson-core-2.19.1.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.19.1\jackson-datatype-jdk8-2.19.1.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.19.1\jackson-datatype-jsr310-2.19.1.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.19.1\jackson-module-parameter-names-2.19.1.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.5.3\spring-boot-starter-tomcat-3.5.3.jar;C:\Users\User\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.42\tomcat-embed-core-10.1.42.jar;C:\Users\User\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.42\tomcat-embed-el-10.1.42.jar;C:\Users\User\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.42\tomcat-embed-websocket-10.1.42.jar;C:\Users\User\.m2\repository\org\springframework\spring-web\6.2.8\spring-web-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\spring-beans\6.2.8\spring-beans-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\spring-webmvc\6.2.8\spring-webmvc-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\spring-aop\6.2.8\spring-aop-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\spring-expression\6.2.8\spring-expression-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\kafka\spring-kafka\3.3.7\spring-kafka-3.3.7.jar;C:\Users\User\.m2\repository\org\springframework\spring-context\6.2.8\spring-context-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\spring-messaging\6.2.8\spring-messaging-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\spring-tx\6.2.8\spring-tx-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\retry\spring-retry\2.0.12\spring-retry-2.0.12.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-clients\3.9.1\kafka-clients-3.9.1.jar;C:\Users\User\.m2\repository\com\github\luben\zstd-jni\1.5.6-4\zstd-jni-1.5.6-4.jar;C:\Users\User\.m2\repository\org\lz4\lz4-java\1.8.0\lz4-java-1.8.0.jar;C:\Users\User\.m2\repository\org\xerial\snappy\snappy-java\1.1.10.5\snappy-java-1.1.10.5.jar;C:\Users\User\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\User\.m2\repository\io\micrometer\micrometer-observation\1.15.1\micrometer-observation-1.15.1.jar;C:\Users\User\.m2\repository\io\micrometer\micrometer-commons\1.15.1\micrometer-commons-1.15.1.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-mail\3.5.3\spring-boot-starter-mail-3.5.3.jar;C:\Users\User\.m2\repository\org\springframework\spring-context-support\6.2.8\spring-context-support-6.2.8.jar;C:\Users\User\.m2\repository\org\eclipse\angus\jakarta.mail\2.0.3\jakarta.mail-2.0.3.jar;C:\Users\User\.m2\repository\jakarta\mail\jakarta.mail-api\2.1.2\jakarta.mail-api-2.1.2.jar;C:\Users\User\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\User\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.5.3\spring-boot-starter-test-3.5.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-test\3.5.3\spring-boot-test-3.5.3.jar;C:\Users\User\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.5.3\spring-boot-test-autoconfigure-3.5.3.jar;C:\Users\User\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\User\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\User\.m2\repository\net\minidev\json-smart\2.5.2\json-smart-2.5.2.jar;C:\Users\User\.m2\repository\net\minidev\accessors-smart\2.5.2\accessors-smart-2.5.2.jar;C:\Users\User\.m2\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;C:\Users\User\.m2\repository\org\assertj\assertj-core\3.27.3\assertj-core-3.27.3.jar;C:\Users\User\.m2\repository\net\bytebuddy\byte-buddy\1.17.6\byte-buddy-1.17.6.jar;C:\Users\User\.m2\repository\org\awaitility\awaitility\4.2.2\awaitility-4.2.2.jar;C:\Users\User\.m2\repository\org\hamcrest\hamcrest\3.0\hamcrest-3.0.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter\5.12.2\junit-jupiter-5.12.2.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.12.2\junit-jupiter-params-5.12.2.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.12.2\junit-jupiter-engine-5.12.2.jar;C:\Users\User\.m2\repository\org\mockito\mockito-core\5.17.0\mockito-core-5.17.0.jar;C:\Users\User\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.6\byte-buddy-agent-1.17.6.jar;C:\Users\User\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\User\.m2\repository\org\mockito\mockito-junit-jupiter\5.17.0\mockito-junit-jupiter-5.17.0.jar;C:\Users\User\.m2\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;C:\Users\User\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\User\.m2\repository\org\springframework\spring-core\6.2.8\spring-core-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\spring-jcl\6.2.8\spring-jcl-6.2.8.jar;C:\Users\User\.m2\repository\org\springframework\spring-test\6.2.8\spring-test-6.2.8.jar;C:\Users\User\.m2\repository\org\xmlunit\xmlunit-core\2.10.2\xmlunit-core-2.10.2.jar;C:\Users\User\.m2\repository\org\springframework\kafka\spring-kafka-test\3.3.7\spring-kafka-test-3.3.7.jar;C:\Users\User\.m2\repository\org\apache\zookeeper\zookeeper\3.8.4\zookeeper-3.8.4.jar;C:\Users\User\.m2\repository\org\apache\zookeeper\zookeeper-jute\3.8.4\zookeeper-jute-3.8.4.jar;C:\Users\User\.m2\repository\org\apache\yetus\audience-annotations\0.12.0\audience-annotations-0.12.0.jar;C:\Users\User\.m2\repository\io\netty\netty-handler\4.1.122.Final\netty-handler-4.1.122.Final.jar;C:\Users\User\.m2\repository\io\netty\netty-common\4.1.122.Final\netty-common-4.1.122.Final.jar;C:\Users\User\.m2\repository\io\netty\netty-resolver\4.1.122.Final\netty-resolver-4.1.122.Final.jar;C:\Users\User\.m2\repository\io\netty\netty-buffer\4.1.122.Final\netty-buffer-4.1.122.Final.jar;C:\Users\User\.m2\repository\io\netty\netty-transport\4.1.122.Final\netty-transport-4.1.122.Final.jar;C:\Users\User\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.122.Final\netty-transport-native-unix-common-4.1.122.Final.jar;C:\Users\User\.m2\repository\io\netty\netty-codec\4.1.122.Final\netty-codec-4.1.122.Final.jar;C:\Users\User\.m2\repository\io\netty\netty-transport-native-epoll\4.1.122.Final\netty-transport-native-epoll-4.1.122.Final.jar;C:\Users\User\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.122.Final\netty-transport-classes-epoll-4.1.122.Final.jar;C:\Users\User\.m2\repository\ch\qos\logback\logback-core\1.5.18\logback-core-1.5.18.jar;C:\Users\User\.m2\repository\ch\qos\logback\logback-classic\1.5.18\logback-classic-1.5.18.jar;C:\Users\User\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-clients\3.9.1\kafka-clients-3.9.1-test.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-server\3.9.1\kafka-server-3.9.1.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-storage\3.9.1\kafka-storage-3.9.1.jar;C:\Users\User\.m2\repository\com\github\ben-manes\caffeine\caffeine\3.2.1\caffeine-3.2.1.jar;C:\Users\User\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\User\.m2\repository\com\google\errorprone\error_prone_annotations\2.38.0\error_prone_annotations-2.38.0.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-group-coordinator\3.9.1\kafka-group-coordinator-3.9.1.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-transaction-coordinator\3.9.1\kafka-transaction-coordinator-3.9.1.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-raft\3.9.1\kafka-raft-3.9.1.jar;C:\Users\User\.m2\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-metadata\3.9.1\kafka-metadata-3.9.1.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-server-common\3.9.1\kafka-server-common-3.9.1.jar;C:\Users\User\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\User\.m2\repository\org\pcollections\pcollections\4.0.1\pcollections-4.0.1.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-server-common\3.9.1\kafka-server-common-3.9.1-test.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-streams-test-utils\3.9.1\kafka-streams-test-utils-3.9.1.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-streams\3.9.1\kafka-streams-3.9.1.jar;C:\Users\User\.m2\repository\org\rocksdb\rocksdbjni\7.9.2\rocksdbjni-7.9.2.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka_2.13\3.9.1\kafka_2.13-3.9.1.jar;C:\Users\User\.m2\repository\org\scala-lang\scala-library\2.13.15\scala-library-2.13.15.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-group-coordinator-api\3.9.1\kafka-group-coordinator-api-3.9.1.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-storage-api\3.9.1\kafka-storage-api-3.9.1.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka-tools-api\3.9.1\kafka-tools-api-3.9.1.jar;C:\Users\User\.m2\repository\net\sourceforge\argparse4j\argparse4j\0.7.0\argparse4j-0.7.0.jar;C:\Users\User\.m2\repository\commons-validator\commons-validator\1.7\commons-validator-1.7.jar;C:\Users\User\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\User\.m2\repository\commons-digester\commons-digester\2.1\commons-digester-2.1.jar;C:\Users\User\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\module\jackson-module-scala_2.13\2.19.1\jackson-module-scala_2.13-2.19.1.jar;C:\Users\User\.m2\repository\com\thoughtworks\paranamer\paranamer\2.8.3\paranamer-2.8.3.jar;C:\Users\User\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-csv\2.19.1\jackson-dataformat-csv-2.19.1.jar;C:\Users\User\.m2\repository\org\bitbucket\b_c\jose4j\0.9.4\jose4j-0.9.4.jar;C:\Users\User\.m2\repository\org\scala-lang\modules\scala-collection-compat_2.13\2.10.0\scala-collection-compat_2.13-2.10.0.jar;C:\Users\User\.m2\repository\org\scala-lang\modules\scala-java8-compat_2.13\1.0.2\scala-java8-compat_2.13-1.0.2.jar;C:\Users\User\.m2\repository\org\scala-lang\scala-reflect\2.13.15\scala-reflect-2.13.15.jar;C:\Users\User\.m2\repository\com\typesafe\scala-logging\scala-logging_2.13\3.9.5\scala-logging_2.13-3.9.5.jar;C:\Users\User\.m2\repository\io\dropwizard\metrics\metrics-core\4.1.12.1\metrics-core-4.1.12.1.jar;C:\Users\User\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;C:\Users\User\.m2\repository\org\apache\kafka\kafka_2.13\3.9.1\kafka_2.13-3.9.1-test.jar;C:\Users\User\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.12.2\junit-jupiter-api-5.12.2.jar;C:\Users\User\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-commons\1.12.2\junit-platform-commons-1.12.2.jar;C:\Users\User\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-launcher\1.12.2\junit-platform-launcher-1.12.2.jar;C:\Users\User\.m2\repository\org\junit\platform\junit-platform-engine\1.12.2\junit-platform-engine-1.12.2.jar;C:\Users\User\.m2\repository\org\testcontainers\junit-jupiter\1.19.4\junit-jupiter-1.19.4.jar;C:\Users\User\.m2\repository\org\testcontainers\testcontainers\1.19.4\testcontainers-1.19.4.jar;C:\Users\User\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\User\.m2\repository\org\hamcrest\hamcrest-core\3.0\hamcrest-core-3.0.jar;C:\Users\User\.m2\repository\org\apache\commons\commons-compress\1.25.0\commons-compress-1.25.0.jar;C:\Users\User\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\User\.m2\repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;C:\Users\User\.m2\repository\com\github\docker-java\docker-java-api\3.3.4\docker-java-api-3.3.4.jar;C:\Users\User\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.3.4\docker-java-transport-zerodep-3.3.4.jar;C:\Users\User\.m2\repository\com\github\docker-java\docker-java-transport\3.3.4\docker-java-transport-3.3.4.jar;C:\Users\User\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\User\.m2\repository\org\testcontainers\kafka\1.19.4\kafka-1.19.4.jar;C:\Users\User\.m2\repository\com\icegreen\greenmail-junit5\2.0.1\greenmail-junit5-2.0.1.jar;C:\Users\User\.m2\repository\com\icegreen\greenmail\2.0.1\greenmail-2.0.1.jar;C:\Users\User\.m2\repository\org\eclipse\angus\angus-mail\2.0.2\angus-mail-2.0.2.jar;C:\Users\User\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\User"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="C:\Users\User\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529\jre"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\Aston\intensive\notification-service"/>
+    <property name="style.color" value="always"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\User\AppData\Local\Temp\surefire17182677750751199568\surefirebooter-20250714003359536_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.6+7-LTS"/>
+    <property name="user.name" value="User"/>
+    <property name="stdout.encoding" value="Cp1251"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-21.0.6+7"/>
+    <property name="localRepository" value="C:\Users\User\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\User\AppData\Local\Temp\"/>
+    <property name="catalina.home" value="C:\Users\User\AppData\Local\Temp\tomcat.0.11796812139365464181"/>
+    <property name="java.version" value="21.0.6"/>
+    <property name="user.dir" value="D:\Aston\intensive\notification-service"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="7936"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="catalina.base" value="C:\Users\User\AppData\Local\Temp\tomcat.0.11796812139365464181"/>
+    <property name="native.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Users\User\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Users/User/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529/jre/bin/server;C:/Users/User/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64;C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\Scripts;C:\Program Files\apache-maven-3.8.6\maven-mvnd-2.0.0-rc-3-windows-amd64\bin;C:\Program Files\PostgreSQL\17\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\nodejs\;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Users\User\.dotnet\tools;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2023.3.2\bin;;C:\Users\User\AppData\Local\GitHubDesktop\bin;C:\Users\User\AppData\Roaming\npm;C:\Users\User\Desktop;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1251"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="21.0.6+7-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="testSendEmailViaApi" classname="io.github.Bochakms.NotificationServiceApplicationTests" time="13.843">
+    <error message="Assertion condition defined as a Lambda expression in io.github.Bochakms.NotificationServiceApplicationTests &#10;Expected size: 1 but was: 0 in:&#10;[] within 10 seconds." type="org.awaitility.core.ConditionTimeoutException"><![CDATA[org.awaitility.core.ConditionTimeoutException: 
+Assertion condition defined as a Lambda expression in io.github.Bochakms.NotificationServiceApplicationTests 
+Expected size: 1 but was: 0 in:
+[] within 10 seconds.
+	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:167)
+	at org.awaitility.core.AssertionCondition.await(AssertionCondition.java:119)
+	at org.awaitility.core.AssertionCondition.await(AssertionCondition.java:31)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:1006)
+	at org.awaitility.core.ConditionFactory.untilAsserted(ConditionFactory.java:790)
+	at io.github.Bochakms.NotificationServiceApplicationTests.testSendEmailViaApi(NotificationServiceIntegrationTest.java:76)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.AssertionError: 
+Expected size: 1 but was: 0 in:
+[]
+	at io.github.Bochakms.NotificationServiceApplicationTests.lambda$testSendEmailViaApi$4(NotificationServiceIntegrationTest.java:78)
+	at org.awaitility.core.AssertionCondition.lambda$new$0(AssertionCondition.java:53)
+	at org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.java:248)
+	at org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.java:235)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+]]></error>
+    <system-out><![CDATA[00:34:01.556 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+00:34:01.570 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+00:34:01.967 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [io.github.Bochakms.NotificationServiceApplicationTests]: NotificationServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+00:34:02.265 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration io.github.Bochakms.NotificationServiceApplication for test class io.github.Bochakms.NotificationServiceApplicationTests
+00:34:03.099 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+00:34:03.744 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+00:34:03.750 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+00:34:03.851 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 28.2.2
+  API Version: 1.50
+  Operating System: Docker Desktop
+  Total Memory: 7891 MB
+00:34:04.327 [main] INFO tc.testcontainers/ryuk:0.6.0 -- Creating container for image: testcontainers/ryuk:0.6.0
+00:34:04.921 [main] INFO tc.testcontainers/ryuk:0.6.0 -- Container testcontainers/ryuk:0.6.0 is starting: c1255e59ae0fb7005bf6de9d3c62b7955c2b1b992cc93f4970337250ab421d4e
+00:34:06.000 [main] INFO tc.testcontainers/ryuk:0.6.0 -- Container testcontainers/ryuk:0.6.0 started in PT1.672608S
+00:34:06.017 [main] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+00:34:06.017 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+00:34:06.018 [main] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+00:34:06.020 [main] INFO tc.confluentinc/cp-kafka:7.3.3 -- Creating container for image: confluentinc/cp-kafka:7.3.3
+00:34:06.256 [main] INFO tc.confluentinc/cp-kafka:7.3.3 -- Container confluentinc/cp-kafka:7.3.3 is starting: f804d8e3be2bc3456c4be3ef54184a6d7a15e79cf3c6a96ae8b5f287e6d11e34
+00:34:19.605 [main] INFO tc.confluentinc/cp-kafka:7.3.3 -- Container confluentinc/cp-kafka:7.3.3 started in PT13.5842705S
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.3)
+
+2025-07-14T00:34:20.893+02:00  INFO 7936 --- [           main] .g.B.NotificationServiceApplicationTests : Starting NotificationServiceApplicationTests using Java 21.0.6 with PID 7936 (started by User in D:\Aston\intensive\notification-service)
+2025-07-14T00:34:20.899+02:00  INFO 7936 --- [           main] .g.B.NotificationServiceApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2025-07-14T00:34:24.001+02:00  INFO 7936 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2025-07-14T00:34:24.045+02:00  INFO 7936 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-14T00:34:24.048+02:00  INFO 7936 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-14T00:34:24.257+02:00  INFO 7936 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-14T00:34:24.260+02:00  INFO 7936 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3281 ms
+2025-07-14T00:34:27.571+02:00  INFO 7936 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 57051 (http) with context path '/'
+2025-07-14T00:34:27.677+02:00  INFO 7936 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-notification-group-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = notification-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2025-07-14T00:34:27.789+02:00  INFO 7936 --- [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-07-14T00:34:28.329+02:00  INFO 7936 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : These configurations '[spring.json.trusted.packages]' were supplied but are not used yet.
+2025-07-14T00:34:28.335+02:00  INFO 7936 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-07-14T00:34:28.335+02:00  INFO 7936 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-07-14T00:34:28.336+02:00  INFO 7936 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1752446068330
+2025-07-14T00:34:28.354+02:00  INFO 7936 --- [           main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Subscribed to topic(s): user-events
+2025-07-14T00:34:28.443+02:00  INFO 7936 --- [           main] .g.B.NotificationServiceApplicationTests : Started NotificationServiceApplicationTests in 8.69 seconds (process running for 28.566)
+2025-07-14T00:34:29.800+02:00  INFO 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Node -1 disconnected.
+2025-07-14T00:34:29.810+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-07-14T00:34:29.811+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-07-14T00:34:29.937+02:00  INFO 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Node -1 disconnected.
+2025-07-14T00:34:29.938+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-07-14T00:34:29.938+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-07-14T00:34:30.057+02:00  INFO 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Node -1 disconnected.
+2025-07-14T00:34:30.058+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-07-14T00:34:30.060+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-07-14T00:34:30.309+02:00  INFO 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Node -1 disconnected.
+2025-07-14T00:34:30.311+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-07-14T00:34:30.311+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-07-14T00:34:30.753+02:00  INFO 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Node -1 disconnected.
+2025-07-14T00:34:30.753+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-07-14T00:34:30.754+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-07-14T00:34:31.394+02:00  INFO 7936 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-14T00:34:31.395+02:00  INFO 7936 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-14T00:34:31.401+02:00  INFO 7936 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2025-07-14T00:34:31.471+02:00  INFO 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Node -1 disconnected.
+2025-07-14T00:34:31.472+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-07-14T00:34:31.472+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+DEBUG: Jakarta Mail version 2.1.3
+DEBUG: URL jar:file:/C:/Users/User/.m2/repository/org/eclipse/angus/jakarta.mail/2.0.3/jakarta.mail-2.0.3.jar!/META-INF/javamail.providers
+DEBUG: successfully loaded resource: jar:file:/C:/Users/User/.m2/repository/org/eclipse/angus/jakarta.mail/2.0.3/jakarta.mail-2.0.3.jar!/META-INF/javamail.providers
+DEBUG: URL jar:file:/C:/Users/User/.m2/repository/org/eclipse/angus/angus-mail/2.0.2/angus-mail-2.0.2.jar!/META-INF/javamail.providers
+DEBUG: successfully loaded resource: jar:file:/C:/Users/User/.m2/repository/org/eclipse/angus/angus-mail/2.0.2/angus-mail-2.0.2.jar!/META-INF/javamail.providers
+DEBUG: successfully loaded resource: /META-INF/javamail.default.providers
+DEBUG: Tables of loaded providers
+DEBUG: Providers Listed By Class Name: {org.eclipse.angus.mail.imap.IMAPStore=jakarta.mail.Provider[STORE,imap,org.eclipse.angus.mail.imap.IMAPStore,Oracle], org.eclipse.angus.mail.smtp.SMTPTransport=jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle], org.eclipse.angus.mail.pop3.POP3Store=jakarta.mail.Provider[STORE,pop3,org.eclipse.angus.mail.pop3.POP3Store,Oracle], org.eclipse.angus.mail.pop3.POP3SSLStore=jakarta.mail.Provider[STORE,pop3s,org.eclipse.angus.mail.pop3.POP3SSLStore,Oracle], org.eclipse.angus.mail.smtp.SMTPSSLTransport=jakarta.mail.Provider[TRANSPORT,smtps,org.eclipse.angus.mail.smtp.SMTPSSLTransport,Oracle], org.eclipse.angus.mail.imap.IMAPSSLStore=jakarta.mail.Provider[STORE,imaps,org.eclipse.angus.mail.imap.IMAPSSLStore,Oracle]}
+DEBUG: Providers Listed By Protocol: {imap=jakarta.mail.Provider[STORE,imap,org.eclipse.angus.mail.imap.IMAPStore,Oracle], smtp=jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle], pop3=jakarta.mail.Provider[STORE,pop3,org.eclipse.angus.mail.pop3.POP3Store,Oracle], imaps=jakarta.mail.Provider[STORE,imaps,org.eclipse.angus.mail.imap.IMAPSSLStore,Oracle], smtps=jakarta.mail.Provider[TRANSPORT,smtps,org.eclipse.angus.mail.smtp.SMTPSSLTransport,Oracle], pop3s=jakarta.mail.Provider[STORE,pop3s,org.eclipse.angus.mail.pop3.POP3SSLStore,Oracle]}
+DEBUG: successfully loaded resource: /META-INF/javamail.default.address.map
+DEBUG: URL jar:file:/C:/Users/User/.m2/repository/org/eclipse/angus/jakarta.mail/2.0.3/jakarta.mail-2.0.3.jar!/META-INF/javamail.address.map
+DEBUG: successfully loaded resource: jar:file:/C:/Users/User/.m2/repository/org/eclipse/angus/jakarta.mail/2.0.3/jakarta.mail-2.0.3.jar!/META-INF/javamail.address.map
+DEBUG: URL jar:file:/C:/Users/User/.m2/repository/org/eclipse/angus/angus-mail/2.0.2/angus-mail-2.0.2.jar!/META-INF/javamail.address.map
+DEBUG: successfully loaded resource: jar:file:/C:/Users/User/.m2/repository/org/eclipse/angus/angus-mail/2.0.2/angus-mail-2.0.2.jar!/META-INF/javamail.address.map
+DEBUG: getProvider() returning jakarta.mail.Provider[TRANSPORT,smtp,org.eclipse.angus.mail.smtp.SMTPTransport,Oracle]
+DEBUG SMTP: useEhlo true, useAuth true
+DEBUG SMTP: trying to connect to host "smtp.example.com", port 587, isSSL false
+2025-07-14T00:34:31.971+02:00 ERROR 7936 --- [o-auto-1-exec-1] i.github.Bochakms.service.EmailService   : Failed to send email to test@example.com
+
+org.springframework.mail.MailSendException: Mail server connection failed. Failed messages: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: smtp.example.com, 587; timeout -1;
+  nested exception is:
+	java.net.UnknownHostException: smtp.example.com
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:410) ~[spring-context-support-6.2.8.jar:6.2.8]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:317) ~[spring-context-support-6.2.8.jar:6.2.8]
+	at org.springframework.mail.MailSender.send(MailSender.java:42) ~[spring-context-support-6.2.8.jar:6.2.8]
+	at io.github.Bochakms.service.EmailService.sendEmail(EmailService.java:40) ~[classes/:na]
+	at io.github.Bochakms.service.EmailService.sendCustomEmail(EmailService.java:30) ~[classes/:na]
+	at io.github.Bochakms.controller.NotificationController.sendEmail(NotificationController.java:19) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.42.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.42.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: smtp.example.com, 587; timeout -1
+	at org.eclipse.angus.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2243) ~[jakarta.mail-2.0.3.jar:na]
+	at org.eclipse.angus.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:729) ~[jakarta.mail-2.0.3.jar:na]
+	at jakarta.mail.Service.connect(Service.java:345) ~[jakarta.mail-2.0.3.jar:na]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:480) ~[spring-context-support-6.2.8.jar:6.2.8]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:399) ~[spring-context-support-6.2.8.jar:6.2.8]
+	... 53 common frames omitted
+Caused by: java.net.UnknownHostException: smtp.example.com
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:686) ~[na:na]
+	at org.eclipse.angus.mail.util.SocketFetcher.createSocket(SocketFetcher.java:368) ~[jakarta.mail-2.0.3.jar:na]
+	at org.eclipse.angus.mail.util.SocketFetcher.getSocket(SocketFetcher.java:243) ~[jakarta.mail-2.0.3.jar:na]
+	at org.eclipse.angus.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2193) ~[jakarta.mail-2.0.3.jar:na]
+	... 57 common frames omitted
+
+2025-07-14T00:34:32.021+02:00 ERROR 7936 --- [o-auto-1-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: io.github.Bochakms.exception.NotificationException: Failed to send email] with root cause
+
+java.net.UnknownHostException: smtp.example.com
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:567) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:686) ~[na:na]
+	at org.eclipse.angus.mail.util.SocketFetcher.createSocket(SocketFetcher.java:368) ~[jakarta.mail-2.0.3.jar:na]
+	at org.eclipse.angus.mail.util.SocketFetcher.getSocket(SocketFetcher.java:243) ~[jakarta.mail-2.0.3.jar:na]
+	at org.eclipse.angus.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2193) ~[jakarta.mail-2.0.3.jar:na]
+	at org.eclipse.angus.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:729) ~[jakarta.mail-2.0.3.jar:na]
+	at jakarta.mail.Service.connect(Service.java:345) ~[jakarta.mail-2.0.3.jar:na]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:480) ~[spring-context-support-6.2.8.jar:6.2.8]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:399) ~[spring-context-support-6.2.8.jar:6.2.8]
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:317) ~[spring-context-support-6.2.8.jar:6.2.8]
+	at org.springframework.mail.MailSender.send(MailSender.java:42) ~[spring-context-support-6.2.8.jar:6.2.8]
+	at io.github.Bochakms.service.EmailService.sendEmail(EmailService.java:40) ~[classes/:na]
+	at io.github.Bochakms.service.EmailService.sendCustomEmail(EmailService.java:30) ~[classes/:na]
+	at io.github.Bochakms.controller.NotificationController.sendEmail(NotificationController.java:19) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.42.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.8.jar:6.2.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.42.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.8.jar:6.2.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1769) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.42.jar:10.1.42]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-07-14T00:34:32.525+02:00  INFO 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Node -1 disconnected.
+2025-07-14T00:34:32.526+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-07-14T00:34:32.526+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-07-14T00:34:33.528+02:00  INFO 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Node -1 disconnected.
+2025-07-14T00:34:33.528+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-07-14T00:34:33.529+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-07-14T00:34:34.401+02:00  INFO 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Node -1 disconnected.
+2025-07-14T00:34:34.402+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-07-14T00:34:34.402+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-07-14T00:34:35.418+02:00  INFO 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Node -1 disconnected.
+2025-07-14T00:34:35.418+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-07-14T00:34:35.418+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-07-14T00:34:36.350+02:00  INFO 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Node -1 disconnected.
+2025-07-14T00:34:36.351+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-07-14T00:34:36.351+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-07-14T00:34:37.348+02:00  INFO 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Node -1 disconnected.
+2025-07-14T00:34:37.348+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-07-14T00:34:37.349+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-07-14T00:34:38.408+02:00  INFO 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Node -1 disconnected.
+2025-07-14T00:34:38.408+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-07-14T00:34:38.409+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-07-14T00:34:39.472+02:00  INFO 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Node -1 disconnected.
+2025-07-14T00:34:39.473+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-07-14T00:34:39.473+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-07-14T00:34:40.364+02:00  INFO 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Node -1 disconnected.
+2025-07-14T00:34:40.364+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-07-14T00:34:40.365+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2025-07-14T00:34:41.422+02:00  INFO 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Node -1 disconnected.
+2025-07-14T00:34:41.422+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Node may not be available.
+2025-07-14T00:34:41.423+02:00  WARN 7936 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-group-1, groupId=notification-group] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+]]></system-out>
+    <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\User\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.6\byte-buddy-agent-1.17.6.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+</testsuite>

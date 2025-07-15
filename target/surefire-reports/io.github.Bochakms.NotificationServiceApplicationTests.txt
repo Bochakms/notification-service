@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: io.github.Bochakms.NotificationServiceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 41.45 s <<< FAILURE! -- in io.github.Bochakms.NotificationServiceApplicationTests
+io.github.Bochakms.NotificationServiceApplicationTests.testSendEmailViaApi -- Time elapsed: 13.84 s <<< ERROR!
+org.awaitility.core.ConditionTimeoutException: 
+Assertion condition defined as a Lambda expression in io.github.Bochakms.NotificationServiceApplicationTests 
+Expected size: 1 but was: 0 in:
+[] within 10 seconds.
+	at org.awaitility.core.ConditionAwaiter.await(ConditionAwaiter.java:167)
+	at org.awaitility.core.AssertionCondition.await(AssertionCondition.java:119)
+	at org.awaitility.core.AssertionCondition.await(AssertionCondition.java:31)
+	at org.awaitility.core.ConditionFactory.until(ConditionFactory.java:1006)
+	at org.awaitility.core.ConditionFactory.untilAsserted(ConditionFactory.java:790)
+	at io.github.Bochakms.NotificationServiceApplicationTests.testSendEmailViaApi(NotificationServiceIntegrationTest.java:76)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: java.lang.AssertionError: 
+Expected size: 1 but was: 0 in:
+[]
+	at io.github.Bochakms.NotificationServiceApplicationTests.lambda$testSendEmailViaApi$4(NotificationServiceIntegrationTest.java:78)
+	at org.awaitility.core.AssertionCondition.lambda$new$0(AssertionCondition.java:53)
+	at org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.java:248)
+	at org.awaitility.core.ConditionAwaiter$ConditionPoller.call(ConditionAwaiter.java:235)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+

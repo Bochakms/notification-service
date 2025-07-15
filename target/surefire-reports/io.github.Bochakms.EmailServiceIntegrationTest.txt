@@ -1,0 +1,45 @@
+-------------------------------------------------------------------------------
+Test set: io.github.Bochakms.EmailServiceIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 11.80 s <<< FAILURE! -- in io.github.Bochakms.EmailServiceIntegrationTest
+io.github.Bochakms.EmailServiceIntegrationTest.sendAccountCreatedEmail_ShouldActuallySendEmail -- Time elapsed: 3.684 s <<< ERROR!
+io.github.Bochakms.exception.NotificationException: Failed to send email
+	at io.github.Bochakms.service.EmailService.sendEmail(EmailService.java:51)
+	at io.github.Bochakms.service.EmailService.sendAccountCreatedEmail(EmailService.java:24)
+	at io.github.Bochakms.EmailServiceIntegrationTest.sendAccountCreatedEmail_ShouldActuallySendEmail(NotificationServiceIntegrationTest.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.springframework.mail.MailSendException: Mail server connection failed. Failed messages: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: localhost, 465; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection refused: connect; message exceptions (1) are:
+Failed message 1: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: localhost, 465; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection refused: connect
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:410)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.send(JavaMailSenderImpl.java:317)
+	at org.springframework.mail.MailSender.send(MailSender.java:42)
+	at io.github.Bochakms.service.EmailService.sendEmail(EmailService.java:47)
+	... 5 more
+Caused by: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: localhost, 465; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection refused: connect
+	at org.eclipse.angus.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2243)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:729)
+	at jakarta.mail.Service.connect(Service.java:345)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:480)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.doSend(JavaMailSenderImpl.java:399)
+	... 8 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:589)
+	at java.base/sun.nio.ch.Net.connect(Net.java:578)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at java.base/java.net.Socket.connect(Socket.java:686)
+	at org.eclipse.angus.mail.util.SocketFetcher.createSocket(SocketFetcher.java:368)
+	at org.eclipse.angus.mail.util.SocketFetcher.getSocket(SocketFetcher.java:222)
+	at org.eclipse.angus.mail.smtp.SMTPTransport.openServer(SMTPTransport.java:2193)
+	... 12 more
+

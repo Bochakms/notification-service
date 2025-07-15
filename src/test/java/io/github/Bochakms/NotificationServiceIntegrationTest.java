@@ -1,90 +1,84 @@
-//package io.github.Bochakms
-//
-//import org.junit.jupiter.api.Test;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.beans.factory.annotation.Value;
-//import org.springframework.boot.test.context.SpringBootTest;
-//import org.springframework.kafka.core.KafkaTemplate;
-//import org.springframework.kafka.test.context.EmbeddedKafka;
-//import org.springframework.mail.javamail.JavaMailSender;
-//
-//import io.github.Bochakms.dto.UserEventMessage;
-//import io.github.Bochakms.service.EmailService;
-//
-//@SpringBootTest
-//@EmbeddedKafka(partitions = 1, brokerProperties = { "listeners=PLAINTEXT://localhost:9092", "port=9092" })
-//class NotificationServiceIntegrationTest {
-//    @Autowired
-//    private KafkaTemplate<String, UserEventMessage> kafkaTemplate;
-//    
-//    @Autowired
-//    private EmailService emailService;
-//    
-//    @Autowired
-//    private JavaMailSender mailSender;
-//    
-//    @Value("${spring.kafka.consumer.group-id}")
-//    private String groupId;
-//    
-//    @Value("${app.email.from}")
-//    private String fromEmail;
-//    
-//    @Test
-//    void whenUserCreatedEvent_thenSendWelcomeEmail() throws Exception {
-//        // Подготовка тестового почтового сервера
-//        GreenMail greenMail = new GreenMail(ServerSetup.SMTP);
-//        greenMail.start();
-//        greenMail.setUser(fromEmail, "user", "password");
-//        
-//        try {
-//            // Отправка сообщения в Kafka
-//            NotificationMessage message = new NotificationMessage(UserEvent.CREATED, "test@example.com");
-//            kafkaTemplate.send("user-events", message);
-//            
-//            // Ожидание обработки сообщения
-//            await().atMost(10, TimeUnit.SECONDS).untilAsserted(() -> {
-//                MimeMessage[] receivedMessages = greenMail.getReceivedMessages();
-//                assertThat(receivedMessages.length).isEqualTo(1);
-//                
-//                MimeMessage receivedMessage = receivedMessages[0];
-//                assertThat(receivedMessage.getSubject()).contains("Аккаунт успешно создан");
-//                assertThat(receivedMessage.getContent().toString()).contains("был успешно создан");
-//                assertThat(receivedMessage.getAllRecipients()[0].toString()).isEqualTo("test@example.com");
-//            });
-//        } finally {
-//            greenMail.stop();
-//        }
-//    }
-//    
-//    @Test
-//    void whenSendNotificationViaApi_thenSendEmail() throws Exception {
-//        // Подготовка тестового почтового сервера
-//        GreenMail greenMail = new GreenMail(ServerSetup.SMTP);
-//        greenMail.start();
-//        greenMail.setUser(fromEmail, "user", "password");
-//        
-//        try {
-//            // Вызов API
-//            TestRestTemplate restTemplate = new TestRestTemplate();
-//            ResponseEntity<String> response = restTemplate.postForEntity(
-//                "http://localhost:8080/api/notifications/send",
-//                new NotificationMessage(UserEvent.DELETED, "delete@example.com"),
-//                String.class);
-//            
-//            // Проверки
-//            assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
-//            
-//            await().atMost(10, TimeUnit.SECONDS).untilAsserted(() -> {
-//                MimeMessage[] receivedMessages = greenMail.getReceivedMessages();
-//                assertThat(receivedMessages.length).isEqualTo(1);
-//                
-//                MimeMessage receivedMessage = receivedMessages[0];
-//                assertThat(receivedMessage.getSubject()).contains("Аккаунт удален");
-//                assertThat(receivedMessage.getContent().toString()).contains("был удалён");
-//                assertThat(receivedMessage.getAllRecipients()[0].toString()).isEqualTo("delete@example.com");
-//            });
-//        } finally {
-//            greenMail.stop();
-//        }
-//    }
-//}
+package io.github.Bochakms;
+
+import com.icegreen.greenmail.configuration.GreenMailConfiguration;
+import com.icegreen.greenmail.junit5.GreenMailExtension;
+import com.icegreen.greenmail.store.FolderException;
+import com.icegreen.greenmail.util.ServerSetup;
+
+import io.github.Bochakms.exception.NotificationException;
+import io.github.Bochakms.service.EmailService;
+import io.github.Bochakms.service.UserEventsConsumer;
+import io.github.Bochakms.util.EmailTemplates;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.RegisterExtension;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.DynamicPropertyRegistry;
+import org.springframework.test.context.DynamicPropertySource;
+
+import jakarta.mail.internet.MimeMessage;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
+public class NotificationServiceIntegrationTest {
+
+    @RegisterExtension
+    static GreenMailExtension greenMail = new GreenMailExtension(ServerSetup.SMTP.dynamicPort())
+            .withConfiguration(GreenMailConfiguration.aConfig()
+                    .withUser("user", "admin"))
+            .withPerMethodLifecycle(false);
+
+    @DynamicPropertySource
+    static void configureMailProperties(DynamicPropertyRegistry registry) {
+        registry.add("spring.mail.host", () -> "localhost");
+        registry.add("spring.mail.port", () -> greenMail.getSmtp().getPort());
+        registry.add("spring.mail.username", () -> "user");
+        registry.add("spring.mail.password", () -> "admin");
+        registry.add("spring.mail.properties.mail.smtp.auth", () -> "true");
+        registry.add("spring.mail.properties.mail.smtp.starttls.enable", () -> "false");
+        registry.add("spring.mail.properties.mail.smtp.ssl.enable", () -> "false");
+    }
+
+    @Autowired
+    private EmailService emailService;
+
+    @BeforeEach
+    void resetGreenMail() {
+        try {
+            greenMail.purgeEmailFromAllMailboxes();
+        } catch (FolderException e) {
+            greenMail.stop();
+            greenMail.start();
+        }
+    }
+
+    @Test
+    void shouldSendAccountCreatedEmail() throws Exception {
+        String testEmail = "recipient@example.com";
+        emailService.sendAccountCreatedEmail(testEmail);
+
+        MimeMessage[] messages = greenMail.getReceivedMessages();
+        assertEquals(1, messages.length);
+
+        MimeMessage message = messages[0];
+        assertEquals("Account Created", message.getSubject());
+        assertEquals(testEmail, message.getAllRecipients()[0].toString());
+        assertTrue(message.getContent().toString().contains(EmailTemplates.ACCOUNT_CREATED_TEMPLATE));
+    }
+
+    @Test
+    void shouldSendAccountDeletedEmail() throws Exception {
+        String testEmail = "recipient@example.com";
+        emailService.sendAccountDeletedEmail(testEmail);
+
+        MimeMessage[] messages = greenMail.getReceivedMessages();
+        assertEquals(1, messages.length);
+
+        MimeMessage message = messages[0];
+        assertEquals("Account Deleted", message.getSubject());
+        assertTrue(message.getContent().toString().contains(EmailTemplates.ACCOUNT_DELETED_TEMPLATE));
+    }
+}
